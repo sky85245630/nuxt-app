@@ -4,19 +4,46 @@ export default {
   //false spa模式
   ssr: false,
 
+  env: {
+    baseUrl: 'http://fuck:3000',
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-app',
+    title: '靠北喔',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'description hid QQ',
+        name: 'meta  description QQ',
+        content: 'meta content QQ',
+      },
+      { hid: 'og:title', property: 'og:title', content: 'og title' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'og description',
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: 'og site_name QQ',
+      },
+      { property: 'og:locale', content: 'zh_TW' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  },
+
+  loading: {
+    color: 'black',
+    failedColor: 'red',
+    height: '2px',
+    duration: 5000,
+    rtl: false,
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

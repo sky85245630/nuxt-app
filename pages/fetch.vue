@@ -1,16 +1,21 @@
 <template>
-  　　<button @click="$store.commit('increment')">
-    {{ $store.state.counter }}
-  </button>
+  <div>
+    <button @click="$store.commit('increment')">
+      {{ $store.state.counter }}
+    </button>
+    <button @click="fetch">123</button>
+  </div>
 </template>
 
 <script>
 export default {
-  fetch({ store, params }) {
-    const asd = 'fetch page'
-    store.commit('setResult', asd)
-    console.log('store', store)
-    console.log('params', params)
+  methods: {
+    fetch: function ({ store, params }) {
+      const asd = 'fetch page'
+      console.log('asd', asd)
+      console.log('store', store)
+      console.log('params', params)
+    },
   },
 }
 </script>

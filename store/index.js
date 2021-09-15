@@ -1,18 +1,24 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+export const state = () => ({
+  counter: 0,
+})
 
-Vue.use(Vuex)
+export const mutations = {
+  setPosts(state, posts) {
+    state.loadedPosts = posts
+  },
+  increment(state) {
+    state.counter++
+  },
+}
 
-const store = () =>
-  new Vuex.Store({
-    state: {
-      counter: 0,
-    },
-    mutations: {
-      increment(state) {
-        state.counter++
-      },
-    },
-  })
+export const actions = {
+  setPosts(vuexContext, posts) {
+    vuexContext.commit('setPosts', posts)
+  },
+}
 
-export default store
+export const getters = {
+  loadedPosts(state) {
+    return state.loadedPosts
+  },
+}

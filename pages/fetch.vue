@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button @click="$store.commit('increment')">
+    <button @click="$store.commit('setPosts')">
       {{ $store.state.counter }}
     </button>
     <button @click="fetch">123</button>

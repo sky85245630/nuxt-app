@@ -28,12 +28,12 @@ export default {
   // asyncData() {
   //   return { result1: '報名結果是 ooxx' }
   // },
-  async asyncData() {
-    let { data } = await axios.post('https://www.thef2e.com/api/isSignUp', {
-      email: 'hexscholl@test.com',
-    })
+  // async asyncData() {
+  //   let { data } = await axios.post('https://www.thef2e.com/api/isSignUp', {
+  //     email: 'hexscholl@test.com',
+  //   })
 
-    return { result: data }
-  },
+  //   return { result: data }
+  // },
 }
 </script>
